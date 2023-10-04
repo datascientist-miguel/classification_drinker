@@ -1,0 +1,29 @@
+# conda env create -f environment.yml
+
+name: classification_smoker_drinker
+
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - plotly
+  - scikit-learn
+  - scikit-learn-intelex
+  - statsmodels
+  - scipy
+  - python=3.10
+  - pip
+  - pyprojroot
+  - fs
+  - jupyter
+  - jupyterlab
+  - pip:
+    - pyhere
+    - numerize
+
