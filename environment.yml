@@ -1,6 +1,6 @@
 # conda env create -f environment.yml
 
-name: classification_smoker_drinker
+name: {{ cookiecutter.project_slug }}
 
 channels:
   - conda-forge
@@ -8,6 +8,7 @@ channels:
   - defaults
 
 dependencies:
+  {% if cookiecutter.project_packages == "All" -%}
   - pandas
   - numpy
   - matplotlib
@@ -17,7 +18,9 @@ dependencies:
   - scikit-learn-intelex
   - statsmodels
   - scipy
-  - python=3.10
+  - imbalanced-learn
+  {% endif -%}
+  - python={{ cookiecutter.python_version }}
   - pip
   - pyprojroot
   - fs
@@ -26,4 +29,5 @@ dependencies:
   - pip:
     - pyhere
     - numerize
+    - kaleido
 
