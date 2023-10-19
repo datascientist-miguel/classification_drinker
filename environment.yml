@@ -19,6 +19,7 @@ dependencies:
   - statsmodels
   - scipy
   - imbalanced-learn
+  - graphviz
   {% endif -%}
   - python={{ cookiecutter.python_version }}
   - pip
